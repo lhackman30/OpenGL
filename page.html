@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Assignment One</title>
+	
+</head>
+<body onload = "main()">
+	<p align="center">
+		<canvas id="glCanvas" width="500" height="500"></canvas>
+	</p>
+	<script type="text/javascript" src="js/geofunc.js"></script>
+	<script type="text/javascript" src="js/lafunc.js"></script>
+    <script src="js/load-file.js"></script>
+    <script src="js/ioSOR.js"></script>
+	<script type="text/javascript" src="js/click.js"></script>
+	<script type="text/javascript" src="js/cuon-matrix.js"></script>
+	<script type="text/javascript" src="js/cuon-utils.js"></script>
+
+	
+	<link rel="stylesheet" type="text/css" href="css/view.css">
+	<div class="slidecontainer">
+		Specular Value: 10  <input type="range" min = "10" max = "120" step="1" value = "60" class="slider" id="ps_slider" onchange="show_value(this.value);">120
+		| FOV: 5  <input type="range" min = "1" max = "100" step="1" value = "1" class="slider" id="fov_slider" onchange="show_value(this.value);"> -100
+	</div>
+		<div class="index_slider">
+		Ambient Color : 0<input type="range" min = "0" max = "9" step="1" value = "7" class="slider" id="i_slider" onchange="show_value(this.value);">9
+		 | Specular Color : 0<input type="range" min = "0" max = "9" step="1" value = "5" class="slider" id="r_slider" onchange="show_value(this.value);">9
+	</div>
+		<div class="radius_slider">
+
+	</div>
+		<input type="file" id="fileinput" />
+		<button id="loadOBJ" type="button">change view</button>
+		<button id="clearCanvas" type="button">Clear</button>
+		<button id="showNormals" type="button">Toggle proj/ortho</button>
+		<button id="lmoveLight" type="button">Move Forward</button>
+		<button id="rmoveLight" type="button">Move Backwards</button>
+		<button id="lmoveCylinder" type="button"><- Camera</button>
+		<button id="rmoveCylinder" type="button">Camera -></button>
+		<button id="zoomIn" type="button">Zoom in</button>
+		<button id="zoomOut" type="button">Zoom out</button>
+		<button id="GLighting" type="button">Gouraud Lighting</button>
+		<button id="PLighting" type="button">Phong Lighting</button>
+
+	<p align="center">
+		<button id="l_button"><</button>
+		<button id="r_button">></button>
+		<br />Use mouse wheel to change color of current line and cylinder.
+		<br />To Select/Delete lines:
+		<br />'E' to enable/disable cursor. Arrow up/down to change selection.
+		<br />'D' to delete selected line
+
+	</p>
+
+
+</body>
+</html>
